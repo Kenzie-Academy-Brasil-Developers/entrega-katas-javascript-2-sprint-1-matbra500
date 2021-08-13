@@ -28,9 +28,10 @@ console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionand
 
 // comece a criar a sua função power na linha abaixo
 function power (power1, power2){
+    
     let retorno = 1
     for (let i =1 ; i <= power2 ; i++){
-     retorno *= multiply(power1, 1)
+     retorno = multiply(power1, retorno)
      
      
     }
@@ -38,7 +39,7 @@ function power (power1, power2){
     
     
 }
-//console.log(power(5,7))
+console.log(power(5,7))
 
 // descomente a linha seguinte para testar sua função
  console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
@@ -48,7 +49,7 @@ function power (power1, power2){
 function factorial (facto){
     let retorno = 1
     for (let i =1 ; i <= facto ; i++){
-     retorno *= multiply(i , 1)
+     retorno = multiply(retorno,i)
      
      
     }
@@ -56,7 +57,7 @@ function factorial (facto){
     
     
 }
-//console.log(factorial(4))
+console.log(factorial(4))
 // descomente a linha seguinte para testar sua função
  console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
